@@ -1,16 +1,22 @@
 import './App.css';
+import { Editor } from '@monaco-editor/react';
 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2>React App</h2>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </header>
-    </div>
+   <main className="h-screen w-full bg-gray-950 flex gap-4 p-4">
+    <aside className="h-full w-1/4 bg-amber-50 rounded-lg">
+    </aside>
+    <section className="h-full w-3/4 bg-neutral-800 rounded-lg">
+      <Editor
+        height="100%"
+        defaultLanguage="javascript"
+        defaultValue="// some comment"
+        theme="vs-dark"
+      />
+    </section>
+
+   </main>
   );
 }
 
