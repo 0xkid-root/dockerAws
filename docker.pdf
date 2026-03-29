@@ -1,0 +1,8 @@
+FROM node:20-alpine {this is the combination of node20 and linux }
+
+
+COPY ./Backend .
+
+RUN npm install
+
+CMD ["node","server.js"] { ye command image bante timee run nhi hota hai image ko run karte hai tab execute hota  hai }
